@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container for the user components */
+.HomeComponent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+    padding: 20px;
+    background-color: #eee99e;
+}
+
+/* Style for the link */
+.HomeComponentLink {
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Individual user component styling */
+.HomeComponentElement {
+    background: linear-gradient(135deg, #f0f0f5, #dcdce1);
+    border: 1px solid #ccc;
+    border-radius: 50%; /* Circular shape */
+    padding: 10px; /* Adjusted padding */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 220px; /* Default size */
+    height: 220px; /* Default size */
+    overflow: hidden; /* Hide overflow */
+    font-size: 1.5rem;
+}
+
+/* Hover effect for individual user component */
+.HomeComponentElement:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Font styling for the user name */
+.HomeComponentElement h3 {
+    color: #333;
+    font-size: clamp(0.7rem, 2vw, 1.2rem); /* Responsive font size */
+    font-weight: 700; /* Made font more bold */
+    margin-bottom: 5px;
+    text-align: center;
+    overflow: hidden; /* Ensure text doesn't overflow */
+}
+
+/* Optional: Add some style for the additional options if needed */
+.HomeComponentElement p {
+    margin: 5px 0;
+    font-size: clamp(0.6rem, 1.5vw, 1rem); /* Responsive font size */
+    color: #666;
+    font-weight: 700; /* Made font more bold */
+    text-align: center;
+    overflow: hidden; /* Ensure text doesn't overflow */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .HomeComponentElement {
+        width: 150px;
+        height: 150px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .HomeComponentElement {
+        width: 100px;
+        height: 100px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .HomeComponentElement {
+        width: 90px;
+        height: 90px;
+        font-size: 0.7rem;
+    }
+}

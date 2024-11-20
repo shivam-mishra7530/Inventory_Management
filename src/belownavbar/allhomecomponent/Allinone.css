@@ -1,0 +1,83 @@
+.AllinOneComponent {
+  padding: 20px;
+  background-color: #f7f8fa; /* Light background color for a modern look */
+}
+
+.heading {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2.5rem; /* Slightly larger font size */
+  color: #2c3e50; /* Darker text color */
+  text-shadow: 1px 1px 2px #ccc;
+}
+
+.subheading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.subheading a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+  transition: color 0.3s ease;
+}
+
+.subheading a:hover {
+  color: #3498db; /* Change color on hover */
+}
+
+/* Common styles for all options */
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem; /* Slightly smaller font size */
+  font-weight: bold;
+  border: none;
+  border-radius: 20px; /* More rounded corners */
+  width: 14rem; /* Adjusted width */
+  height: 10rem; /* Adjusted height */
+  margin: 20px;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Gradient background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.option:hover {
+  transform: translateY(-5px) scale(1.05); /* Slight lift and scale effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.option:nth-child(even) {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Alternate gradient */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .option {
+      width: 12rem;
+      height: 8rem;
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .option {
+      width: 10rem;
+      height: 6rem;
+      font-size: 0.8rem;
+  }
+}

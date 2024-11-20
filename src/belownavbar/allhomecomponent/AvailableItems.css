@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.core-concept-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #eee99e;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+}
+
+#core-concept h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem); /* Responsive font size */
+}
+
+.core-concept-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.core-concept-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  width: calc(100% / 4 - 20px); /* 4 items per row by default */
+  max-width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.core-concept-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.core-concept-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.core-concept-content {
+  text-align: center;
+}
+
+.core-concept-content h3 {
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+  margin-bottom: 10px;
+}
+
+.core-concept-content p {
+  font-size: clamp(0.8rem, 1.5vw, 1rem); /* Responsive font size */
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .core-concept-item {
+      width: calc(100% / 3 - 40px); /* 3 items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .core-concept-item {
+      width: calc(100% / 2 - 20px); /* 2 items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .core-concept-item {
+    width: calc(100% / 2 - 30px); /* 1 item per row */
+    min-width: 150px;
+  }
+
+  .core-concept-item img {
+      width: 80px; /* Smaller image size */
+      height: 80px;
+  }
+}

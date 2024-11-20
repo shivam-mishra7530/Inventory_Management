@@ -1,0 +1,90 @@
+/* Ensure the entire page takes up the full height and has the desired background color */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #eee99e;
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items horizontally */
+  padding: 0px;
+  background-color: #eee99e;
+}
+
+/* Styles for the TabButton component */
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeaee;
+  padding: 30px; 
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 50px auto; /* Centers the container and adds top margin */
+}
+
+.Head-Button {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #0b0325;
+  color: rgb(247, 247, 203);
+  border: none;
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.Title {
+  margin-top: 20px;
+  font-size: 26px;
+  color: #2c0d2b;
+  padding: 2px 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Description {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 600px) {
+  .Head-Button {
+      flex-direction: column; /* Arrange buttons vertically on mobile */
+      align-items: center;
+  }
+
+  button {
+      width: 100%; /* Make buttons take full width on mobile */
+      max-width: 300px; /* Optionally, limit the max width */
+  }
+}
